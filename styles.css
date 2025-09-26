@@ -71,6 +71,7 @@ h1 {
     vertical-align: baseline;
     border-radius: 10px;
     font-family:'Courier New', Courier, monospace;
+    float:left
 }
 
 .navbar a:hover{
