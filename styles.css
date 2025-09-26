@@ -48,11 +48,11 @@ h1 {
 .navbar {
     background-color: #2f6097dc;
     margin-top: 0%;
-    margin-bottom: 0%;
+    margin-bottom: %;
     margin-left: 5vh;
     margin-right: 5vh;
     border-radius: 10px;
-    overflow:hidden;
+    overflow: hidden;
     width: 95%;
     height: 40px;
 }
@@ -76,7 +76,6 @@ h1 {
     vertical-align: baseline;
     border-radius: 10px;
     font-family:'Courier New', Courier, monospace;
-    float:left
 }
 
 .navbar a:hover{
