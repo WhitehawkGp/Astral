@@ -58,7 +58,7 @@ h1 {
 }
 
 .navbar ul {
-    display: inline;
+    display: inline-flex;
     list-style: none;
 }
 
