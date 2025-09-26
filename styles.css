@@ -69,8 +69,9 @@ h1 {
 
 .navbar a {
     color: #a1c6fcc2;
+    background-color: #3093d1;
     text-align: center;
-    padding: 8px 9px;
+    padding: 10px 15px;
     font-size: 20px;
     text-decoration: none;
     vertical-align: baseline;
