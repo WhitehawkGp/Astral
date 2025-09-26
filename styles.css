@@ -58,19 +58,19 @@ h1 {
 
 .navbar li {
     display: inline;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 5vh;
+    margin-right: 5vh;
 }
 
 .navbar a {
     color: #a1c6fcc2;
     text-align: center;
     padding: 8px 9px;
-    font-size: 18px;
+    font-size: 20px;
     text-decoration: none;
     vertical-align: baseline;
     border-radius: 10px;
-    font-family:'Courier New', Courier, monospace
+    font-family:'Courier New', Courier, monospace;
 }
 
 .navbar a:hover{
