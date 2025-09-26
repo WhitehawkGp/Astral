@@ -1,4 +1,4 @@
-/* General page styles */
+
 
 body {
     font-family: Arial, sans-serif;
@@ -10,6 +10,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     animation: fadeIn 1s ease-in-out;
+    margin-top: 20vh;
 }
 
 @font-face {
@@ -31,7 +32,6 @@ body {
             font-weight: bold;
         }
 
-/* Fade-in effect */
 @keyframes fadeIn {
     from {
         opacity: 0;
