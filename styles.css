@@ -64,6 +64,7 @@ h1 {
 
 .navbar ul li {
     margin: 25px;
+    margin-top: -1%;
 }
 
 .navbar a {
