@@ -62,7 +62,8 @@ h1 {
 }
 
 .navbar ul li {
-    margin: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .navbar a {
