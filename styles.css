@@ -48,13 +48,13 @@ h1 {
 .navbar {
     background-color: #2f6097dc;
     margin-top: 0%;
-    margin-bottom: %;
+    margin-bottom: 0%;
     margin-left: 5vh;
     margin-right: 5vh;
     border-radius: 10px;
     overflow: hidden;
     width: 95%;
-    height: 40px;
+    height: 50px;
 }
 
 .navbar ul {
@@ -63,8 +63,7 @@ h1 {
 }
 
 .navbar ul li {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin:0%;
 }
 
 .navbar a {
@@ -75,7 +74,7 @@ h1 {
     text-decoration: none;
     vertical-align: baseline;
     border-radius: 10px;
-    font-family:'Courier New', Courier, monospace;
+    font-family:'Courier New, Courier, monospace';
 }
 
 .navbar a:hover{
