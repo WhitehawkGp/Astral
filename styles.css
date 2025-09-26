@@ -58,8 +58,8 @@ h1 {
 
 .navbar li {
     display: inline;
-    margin-left: 5vh;
-    margin-right: 5vh;
+    margin-left: 2.5vh;
+    margin-right: 2.5vh;
 }
 
 .navbar a {
@@ -128,7 +128,7 @@ nav a {
 nav a:hover {
     color: lightblue;
 }
-*/
+
 
 /* Header */
 header {
