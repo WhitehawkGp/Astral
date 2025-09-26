@@ -48,6 +48,7 @@ h1 {
 .navbar {
     background-color: #2f6097dc;
     margin-top: 0%;
+    margin-bottom: 0%;
     margin-left: 5vh;
     margin-right: 5vh;
     border-radius: 10px;
@@ -62,8 +63,8 @@ h1 {
 }
 
 .navbar ul li {
-    margin-left: 15%;
-    margin-right: 15px%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .navbar a {
