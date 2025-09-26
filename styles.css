@@ -56,10 +56,13 @@ h1 {
     height: 40px;
 }
 
-.navbar li {
-    display: inline;
-    margin-left: 2.5vh;
-    margin-right: 2.5vh;
+.navbar ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 15px;
 }
 
 .navbar a {
@@ -93,6 +96,7 @@ h1 {
     padding-right: 10px;
     font-family: 'Courier New', Courier, monospace;
 }
+
 
 
 /* Navigation bar old */
