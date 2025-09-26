@@ -64,12 +64,13 @@ h1 {
 
 .navbar ul li {
     margin: 50px;
-    margin-top: -1%;
+    margin-top: 0%;
+    margin-bottom: 0%;
 }
 
 .navbar a {
     color: #a1c6fcc2;
-    background-color: #3093d1;
+    background-color: #93c6e6a3;
     text-align: center;
     padding: 10px 15px;
     font-size: 20px;
