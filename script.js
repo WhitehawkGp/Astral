@@ -1,21 +1,3 @@
-//// for random text(new)
-// List of possible messages
-const messages = [
-    "welcome :)",
-    "pineapple on pizza is lowkey good",
-    "have a great day!",
-    "you’re awesome!",
-    "thanks for stopping by!"
-];
-
-
-// Pick a random one
-const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-
-
-// Show it on the page
-document.getElementById("message").textContent = randomMessage;
-
 // Background Image Randomizer
 document.addEventListener("DOMContentLoaded", function () {
     const images = [
@@ -167,6 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(error => console.error("Failed to load navbar:", error));
 });
+
 
 
 
