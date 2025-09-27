@@ -104,11 +104,18 @@ h1 {
 
 /* Navigation bar old */
 nav {
+    background-color: #2f6097dc;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 95%;
+    height: 40px;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.85);
     padding: 10px 0;
     z-index: 1000;
 }
