@@ -1,4 +1,11 @@
-
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+font-family: Arial, sans-serif;
+font-size: 2rem;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -305,4 +312,5 @@ nav ul li .dropdown-content li a:hover {
 nav ul li .dropdown-content.show {
   display: block;
 }
+
 
