@@ -1,11 +1,4 @@
-/* #message {
-  font-family: Arial, sans-serif;
-  font-size: 2rem;
-  color: darkblue;
-  text-align: center;
-  margin-top: 20%;
-}
-*/
+
 
 body {
     font-family: Arial, sans-serif;
@@ -312,6 +305,7 @@ nav ul li .dropdown-content li a:hover {
 nav ul li .dropdown-content.show {
   display: block;
 }
+
 
 
 
