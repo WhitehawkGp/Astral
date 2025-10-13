@@ -1,16 +1,17 @@
 
-
 body {
     font-family: Arial, sans-serif;
     color: white;
     margin: 0;
     padding: 50px 0 0 0; 
     text-align: center;
-    background-image: url("cartoon.jpg")
+    background-image: url("cartoon.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     animation: fadeIn 1s ease-in-out;
+}
+
 }
 
 h1 {
@@ -306,6 +307,7 @@ nav ul li .dropdown-content li a:hover {
 nav ul li .dropdown-content.show {
   display: block;
 }
+
 
 
 
