@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 50px 0 0 0; 
     text-align: center;
-    background-image: url("")
+    background-image: url("cartoon.jpg")
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -306,6 +306,7 @@ nav ul li .dropdown-content li a:hover {
 nav ul li .dropdown-content.show {
   display: block;
 }
+
 
 
 
