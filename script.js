@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const images = [
         "https://cdn.wccftech.com/wp-content/uploads/2016/09/spacee-scaled.jpg",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWGpyTSzKZU9hS-ptH3WJZQ0TMGDqczO0-5A&s"
+        "https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?_gl=1*nijziw*_ga*NTI5OTE5MzQuMTc2NTE0NjU5Mw..*_ga_8JE65Q40S6*czE3NjUxNDY1OTMkbzEkZzAkdDE3NjUxNDY1OTMkajYwJGwwJGgw"
     ];
     
     const randomImage = images[Math.floor(Math.random() * images.length)];
