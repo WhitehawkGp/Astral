@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const images = [
         "https://cdn.wccftech.com/wp-content/uploads/2016/09/spacee-scaled.jpg",
         "https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?_gl=1*nijziw*_ga*NTI5OTE5MzQuMTc2NTE0NjU5Mw..*_ga_8JE65Q40S6*czE3NjUxNDY1OTMkbzEkZzAkdDE3NjUxNDY1OTMkajYwJGwwJGgw"
+        "https://images.pexels.com/photos/41951/solar-system-emergence-spitzer-telescope-telescope-41951.jpeg?_gl=1*5qf137*_ga*NTI5OTE5MzQuMTc2NTE0NjU5Mw..*_ga_8JE65Q40S6*czE3NjUxNDY1OTMkbzEkZzEkdDE3NjUxNDY4MjMkajU5JGwwJGgw"
     ];
     
     const randomImage = images[Math.floor(Math.random() * images.length)];
@@ -149,6 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(error => console.error("Failed to load navbar:", error));
 });
+
 
 
 
