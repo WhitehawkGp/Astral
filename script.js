@@ -39,17 +39,21 @@ function checkPassword() {
 }
 
 function openRandomSite() {
-    // List of random websites
     const sites = [
         "https://shaneplaysgames.netlify.app/",
         "https://bruhman12345.netlify.app/",
         "https://shotbroup.netlify.app/",
         "https://stopstealinglosers.netlify.app/",
-        "https://tatatashaur.netlify.app",
+        "https://tatatashaur.netlify.app/",
         "https://imreallycool.netlify.app/",
-        "https://ilovegamewebsite.netlify.app",
-        "https://500-cigarettes.netlify.app"
+        "https://ilovegamewebsite.netlify.app/",
+        "https://500-cigarettes.netlify.app/"
     ];
+
+    const randomIndex = Math.floor(Math.random() * sites.length);
+    window.location.href = sites[randomIndex];
+}
+
 
     // Open a random site from the list
     const randomIndex = Math.floor(Math.random() * sites.length);
@@ -57,25 +61,17 @@ function openRandomSite() {
 }
 
 
-function openRandomSiteU() {
-    // List of random websites
+function openRandomSite() {
     const sites = [
-        "https://asoilkdh.global.ssl.fastly.net/",
-        "https://pizza.frogiee.one/",
-        "https://schoologymathhelp.web.app/",
-        "https://classroom84.global.ssl.fastly.net/",
-        "https://loungef2x.global.ssl.fastly.net/",
-        "https://gobblethemup.vercel.app",
-        "https://asoilkdh.global.ssl.fastly.net/", // intentional duplicate?
-        "https://newsforall.site/",
-        "https://portal.hehege.vpn64.de/",
-        "https://www.apau.shaaaaaaaaaaadow.home64.de/",
-        "https://hamburger.netlify.app/",
-        "https://soto-inc.global.ssl.fastly.net/",
-        "https://gointospace.app/",
-        "https://bi.edu.ooguy.com/",
-        "https://infinitetutoring.com.au/",
-        "https://mathtutors4school.web.app/"
+        "https://shaneplaysgames.netlify.app/",
+        "https://bruhman12345.netlify.app/"
+        
+    ];
+
+    const randomIndex = Math.floor(Math.random() * sites.length);
+    window.location.href = sites[randomIndex];
+}
+
         // "https://charming-capybara-53c2c8.netlify.app/1.8" // Uncomment if needed
     ];
 
@@ -150,6 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(error => console.error("Failed to load navbar:", error));
 });
+
 
 
 
