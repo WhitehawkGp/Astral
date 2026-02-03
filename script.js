@@ -50,8 +50,8 @@ function openRandomSite() {
         "https://500-cigarettes.netlify.app/"
     ];
 
-    const randomIndex = Math.floor(Math.random() * sites.length);
-    window.location.href = sites[randomIndex];
+    const randomsite = sites.floor[Math.random() * sites.length);
+    window.location.href = randomSite;
 }
 
 
@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(error => console.error("Failed to load navbar:", error));
 });
+
 
 
 
