@@ -39,21 +39,24 @@ function checkPassword() {
 }
 
 
-function openRandomSite() {
+<script>
+  function openRandomSite() {
     const sites = [
-        "https://shaneplaysgames.netlify.app/",
-        "https://bruhman12345.netlify.app/",
-        "https://shotbroup.netlify.app/",
-        "https://stopstealinglosers.netlify.app/",
-        "https://tatatashaur.netlify.app/",
-        "https://imreallycool.netlify.app/",
-        "https://ilovegamewebsite.netlify.app/",
-        "https://500-cigarettes.netlify.app/"
+      "https://shaneplaysgames.netlify.app/",
+      "https://bruhman12345.netlify.app/",
+      "https://shotbroup.netlify.app/",
+      "https://stopstealinglosers.netlify.app/",
+      "https://tatatashaur.netlify.app/",
+      "https://imreallycool.netlify.app/",
+      "https://ilovegamewebsite.netlify.app/",
+      "https://500-cigarettes.netlify.app/"
     ];
 
-    const randomsite = sites.floor[Math.random() * sites.length);
-    window.location.href = randomSite;
-}
+    const randomIndex = Math.floor(Math.random() * sites.length);
+    window.open(sites[randomIndex], "_blank");
+  }
+</script>
+
 
 
     // Open a random site from the list
@@ -147,6 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(error => console.error("Failed to load navbar:", error));
 });
+
 
 
 
