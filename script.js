@@ -1,36 +1,20 @@
-<script>
-/* =========================
-   Copy to Clipboard
-========================= */
+/* ===============================
+   BASIC CHECK
+================================ */
+console.log("script.js loaded");
+
+/* ===============================
+   COPY TO CLIPBOARD
+================================ */
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text)
     .then(() => alert("Copied: " + text))
-    .catch(err => console.error("Could not copy text:", err));
+    .catch(err => console.error("Clipboard error:", err));
 }
 
-/* =========================
-   Password-Protected Update
-========================= */
-function checkPassword() {
-  const password = prompt("Enter password:");
-  if (password !== "thisissigmachat") {
-    alert("Incorrect password!");
-    return;
-  }
-
-  const newText = prompt("Enter your update:");
-  if (!newText) return;
-
-  const updatesDiv = document.getElementById("updates");
-  const newUpdate = document.createElement("div");
-  newUpdate.classList.add("update-box");
-  newUpdate.innerHTML = `<h3>Update from The TALW</h3><p>${newText}</p>`;
-  updatesDiv.appendChild(newUpdate);
-}
-
-/* =========================
-   Open Random Site
-========================= */
+/* ===============================
+   RANDOM SITE OPENER
+================================ */
 function openRandomSite(newTab = true) {
   const sites = [
     "https://shaneplaysgames.netlify.app/",
@@ -43,76 +27,115 @@ function openRandomSite(newTab = true) {
     "https://500-cigarettes.netlify.app/"
   ];
 
+  if (sites.length === 0) return;
+
   const randomIndex = Math.floor(Math.random() * sites.length);
+  const url = sites[randomIndex];
 
   if (newTab) {
-    window.open(sites[randomIndex], "_blank");
+    window.open(url, "_blank");
   } else {
-    window.location.href = sites[randomIndex];
+    window.location.href = url;
   }
 }
 
-/* =========================
-   Cloak Button
-========================= */
-document.getElementById("cloakButton")?.addEventListener("click", () => {
-  const win = window.open("about:blank");
-  if (!win) {
-    alert("Pop-up blocked! Allow pop-ups to use this feature.");
+/* ===============================
+   PASSWORD-PROTECTED UPDATE POST
+================================ */
+function checkPassword() {
+  const password = prompt("Enter password:");
+  if (password !== "thisissigmachat") {
+    alert("Incorrect password!");
     return;
   }
 
-  win.document.open();
-  win.document.write(`
-    <html>
-      <head>
-        <title>Blank</title>
-      </head>
-      <body style="margin:0; overflow:hidden;">
-        <iframe
-          src="${window.location.href}"
-          style="position:fixed; top:0; left:0; width:100vw; height:100vh; border:none;">
-        </iframe>
-      </body>
-    </html>
-  `);
-  win.document.close();
+  const newText = prompt("Enter your update:");
+  if (!newText) return;
 
-  setTimeout(() => window.close(), 1000);
+  const updatesDiv = document.getElementById("updates");
+  if (!updatesDiv) return;
+
+  const newUpdate = document.createElement("div");
+  newUpdate.className = "update-box";
+  newUpdate.innerHTML = `
+    <h3>Update from The TALW</h3>
+    <p>${newText}</p>
+  `;
+
+  updatesDiv.appendChild(newUpdate);
+}
+
+/* ===============================
+   CLOAK BUTTON
+================================ */
+document.addEventListener("DOMContentLoaded", () => {
+  const cloakBtn = document.getElementById("cloakButton");
+  if (!cloakBtn) return;
+
+  cloakBtn.addEventListener("click", () => {
+    const win = window.open("about:blank");
+    if (!win) {
+      alert("Pop-ups blocked!");
+      return;
+    }
+
+    win.document.open();
+    win.document.write(`
+      <html>
+        <head><title>Blank</title></head>
+        <body style="margin:0; overflow:hidden;">
+          <iframe
+            src="${window.location.href}"
+            style="width:100vw; height:100vh; border:none;">
+          </iframe>
+        </body>
+      </html>
+    `);
+    win.document.close();
+
+    setTimeout(() => window.close(), 800);
+  });
 });
 
-/* =========================
-   Firebase Updates Loader
-========================= */
+/* ===============================
+   FIREBASE UPDATE LOADER
+================================ */
 function loadUpdates() {
-  if (typeof db === "undefined") return;
+  if (typeof db === "undefined") {
+    console.warn("Firebase not loaded");
+    return;
+  }
 
-  const updatesRef = db.ref("updates");
-  updatesRef.on("value", snapshot => {
-    const updatesDiv = document.getElementById("updates");
+  const updatesDiv = document.getElementById("updates");
+  if (!updatesDiv) return;
+
+  db.ref("updates").on("value", snapshot => {
     updatesDiv.innerHTML = "";
 
     snapshot.forEach(child => {
-      const updateBox = document.createElement("div");
-      updateBox.classList.add("update-box");
-      updateBox.innerHTML = `
+      const data = child.val();
+
+      const box = document.createElement("div");
+      box.className = "update-box";
+      box.innerHTML = `
         <h3>Update from The TALW</h3>
-        <p>${child.val().text}</p>
+        <p>${data.text}</p>
       `;
-      updatesDiv.appendChild(updateBox);
+
+      updatesDiv.appendChild(box);
     });
   });
 }
 
-/* =========================
-   Navbar Loader
-========================= */
+/* ===============================
+   NAVBAR LOADER
+================================ */
 document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.getElementById("navbar-container");
+  if (!nav) return;
+
   fetch("navbar.html")
     .then(res => res.text())
-    .then(html => {
-      document.getElementById("navbar-container").innerHTML = html;
-    })
-    .catch(err => console.error("Failed to load navbar:", err));
+    .then(html => nav.innerHTML = html)
+    .catch(err => console.error("Navbar load failed:", err));
 });
-</script>
