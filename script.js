@@ -38,6 +38,7 @@ function checkPassword() {
     }
 }
 
+
 function openRandomSite() {
     const sites = [
         "https://shaneplaysgames.netlify.app/",
@@ -146,6 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(error => console.error("Failed to load navbar:", error));
 });
+
 
 
 
