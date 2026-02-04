@@ -8,7 +8,7 @@ console.log("script.js loaded");
 ================================ */
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text)
-    .then(() => alert("Copied: " + text))
+    .then(() => console.log("Copied:", text))
     .catch(err => console.error("Clipboard error:", err));
 }
 
@@ -23,8 +23,8 @@ function openRandomSite(newTab = true) {
     "https://stopstealinglosers.netlify.app/",
     "https://tatatashaur.netlify.app/",
     "https://imreallycool.netlify.app/",
-    "https://bruhman12345.netlify.app/
-     ];
+    "https://bruhman12345.netlify.app/"
+  ];
 
   if (sites.length === 0) return;
 
@@ -56,11 +56,15 @@ function checkPassword() {
 
   const newUpdate = document.createElement("div");
   newUpdate.className = "update-box";
-  newUpdate.innerHTML = `
-    <h3>Update from The TALW</h3>
-    <p>${newText}</p>
-  `;
 
+  const h3 = document.createElement("h3");
+  h3.textContent = "Update from The TALW";
+
+  const p = document.createElement("p");
+  p.textContent = newText;
+
+  newUpdate.appendChild(h3);
+  newUpdate.appendChild(p);
   updatesDiv.appendChild(newUpdate);
 }
 
@@ -116,11 +120,15 @@ function loadUpdates() {
 
       const box = document.createElement("div");
       box.className = "update-box";
-      box.innerHTML = `
-        <h3>Update from The TALW</h3>
-        <p>${data.text}</p>
-      `;
 
+      const h3 = document.createElement("h3");
+      h3.textContent = "Update from The TALW";
+
+      const p = document.createElement("p");
+      p.textContent = data.text;
+
+      box.appendChild(h3);
+      box.appendChild(p);
       updatesDiv.appendChild(box);
     });
   });
@@ -138,7 +146,3 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(html => nav.innerHTML = html)
     .catch(err => console.error("Navbar load failed:", err));
 });
-
-
-
-
