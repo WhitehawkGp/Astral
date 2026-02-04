@@ -15,7 +15,7 @@ function copyToClipboard(text) {
 /* ===============================
    RANDOM SITE OPENER
 ================================ */
-function openRandomSiteU(newTab = true) {
+function openRandomSite(newTab = true) {
   const sites = [
     "https://shaneplaysgames.netlify.app/",
     "https://bruhman12345.netlify.app/",
@@ -139,4 +139,5 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(html => nav.innerHTML = html)
     .catch(err => console.error("Navbar load failed:", err));
 });
+
 
