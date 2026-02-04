@@ -23,9 +23,8 @@ function openRandomSite(newTab = true) {
     "https://stopstealinglosers.netlify.app/",
     "https://tatatashaur.netlify.app/",
     "https://imreallycool.netlify.app/",
-    "https://bruhman12345.netlify.app/,
-    "https://haack.netlify.app/"
-  ];
+    "https://bruhman12345.netlify.app/
+     ];
 
   if (sites.length === 0) return;
 
