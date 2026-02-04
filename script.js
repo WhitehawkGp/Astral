@@ -23,8 +23,7 @@ function openRandomSite(newTab = true) {
     "https://stopstealinglosers.netlify.app/",
     "https://tatatashaur.netlify.app/",
     "https://imreallycool.netlify.app/",
-    "https://ilovegamewebsite.netlify.app/",
-    "https://500-cigarettes.netlify.app/"
+      "https://bruhman12345.netlify.app
   ];
 
   if (sites.length === 0) return;
@@ -139,5 +138,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(html => nav.innerHTML = html)
     .catch(err => console.error("Navbar load failed:", err));
 });
+
 
 
